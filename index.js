@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const connectToDb = require("./lib/db/db");
+const path =require("path");
 
 const port = 5000 || process.env.PORT;
 
