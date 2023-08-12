@@ -1,0 +1,19 @@
+{
+  "name": "statuscode0",
+  "version": "1.0.0",
+  "description": "project under statuscode0",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd ./frontend && npm run build",
+    "dev": "nodemon index"
+  },
+  "author": "devlovers",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.3",
+    "nodemon": "^3.0.1"
+  }
+}
