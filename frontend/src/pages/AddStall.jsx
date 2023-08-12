@@ -4,7 +4,7 @@ const AddStall = () => {
   return (
     <>
       <div>
-        <p>Add Stall</p>
+        <p className="text-slate-600">Add Stall</p>
       </div>
     </>
   );
