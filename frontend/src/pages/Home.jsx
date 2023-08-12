@@ -4,7 +4,7 @@ import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 // import LoginButton from "../components/Login";
 // import LogoutButton from "../components/LogoutButton";
-// import Profile from "../components/Profile";
+  import Profile from "../components/Profile";
 
 const Home = () => {
   return (
