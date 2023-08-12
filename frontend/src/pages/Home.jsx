@@ -1,8 +1,6 @@
 import React from "react";
 import Navbar from "../components/navbar/Navbar";
-// import LoginButton from "../components/Login";
-// import LogoutButton from "../components/LogoutButton";
-// import Profile from "../components/Profile";
+import Profile from "../components/Profile";
 
 const Home = () => {
   return (
@@ -14,8 +12,11 @@ const Home = () => {
         </div>
         {/* <LoginButton /> */}
         {/* <LogoutButton /> */}
-        {/* <Profile /> */}
-        <div className="gradient__bg">{/* <Cards /> */}</div>
+
+        <div className="gradient__bg">
+          {/* <Cards /> */}
+          <Profile />
+        </div>
       </div>
       {/* <Footer /> */}
     </>
