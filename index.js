@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 const connectToDb = require("./lib/db/db");
 const path =require("path");
 
@@ -23,7 +24,6 @@ app.use(express.static(path.join(__dirname, "./frontend/build")));
 app.get("*", (req, res) => {
   res.sendFile(path.resolve("./frontend/build", "index.html"));
 });
-
 
 
 app.listen(port, () => {
