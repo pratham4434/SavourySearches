@@ -3,9 +3,6 @@ import Navbar from "../components/navbar/Navbar";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Cards from "../components/cardsection/Cards";
-// import LoginButton from "../components/Login";
-// import LogoutButton from "../components/LogoutButton";
-  import Profile from "../components/Profile";
 
 const Home = () => {
   return (
@@ -15,15 +12,15 @@ const Home = () => {
           <Navbar />
           <Header />
         </div>
-        {/* <LoginButton /> */}
-        {/* <LogoutButton /> */}
 
         <div className="gradient__bg">
           <Cards />
           {/* <Profile /> */}
         </div>
       </div>
-      <Footer />
+      <div className="gradient__bg">
+        <Footer />
+      </div>
     </>
   );
 };
