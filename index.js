@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 const connectToDb = require("./lib/db/db");
 
 const port = 5000 || process.env.PORT;
@@ -23,7 +24,6 @@ app.get("*", (req, res) => {
   res.sendFile(path.resolve("./frontend/build", "index.html"));
 });
 
-app.use(errorMiddleware);
 
 app.listen(port, () => {
   console.log(`server is running at http://localhost:${port}`);
