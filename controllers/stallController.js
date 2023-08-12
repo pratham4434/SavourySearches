@@ -145,11 +145,25 @@ const addStar = asyncHandler(async (req, res) => {
     }
 });
 
+const searchStall=asyncHandler(async(req,res)=>{
+    const name=req.params.name
+    console.log(name);
+
+    try{
+        const stall=await postStall.find({stallname:{$regex:name,$options:"i"}});
+
+        res.status(200).json(stall);
+    }catch(error){
+        res.json(500).json(error);
+    }
+})
+
 module.exports={
     createStall,
     getStall,
     updateStall,
     addCommentOnStall,
     getStallById,addStar,
-    addReportToStall
+    addReportToStall,
+    searchStall
 }

@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^2.2.0",
+    "@mapbox/mapbox-gl-geocoder": "^5.0.1",
+    "axios": "^1.4.0",
+    "mapbox-gl": "^2.15.0",
     "@mantine/core": "^6.0.19",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
