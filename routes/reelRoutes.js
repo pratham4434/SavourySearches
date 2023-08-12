@@ -1,5 +1,5 @@
 const express=require("express");
-const {createReel,likeReel,getAllReel}=require("../Controllers/reelController");
+const {createReel,likeReel,getAllReel}=require("../controllers/reelController");
 
 const router=express.Router();
 
