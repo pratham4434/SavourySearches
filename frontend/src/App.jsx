@@ -5,7 +5,7 @@ import { AuthContext } from "./context/AuthContext";
 import Home from "./pages/Home";
 function App() {
   const [userEmail, setUserEmail] = useState("");
-
+  console.log(userEmail);
   return (
     <>
       <BrowserRouter>
