@@ -1,5 +1,5 @@
 const express=require("express");
-const {createStall, getStall, updateStall, addCommentOnStall, getStallById, addStar, addReportToStall}=require('../Controllers/poststallController');
+const {createStall, getStall, updateStall, addCommentOnStall, getStallById, addStar, addReportToStall}=require('../controllers/stallController');
 
 const router=express.Router();
 

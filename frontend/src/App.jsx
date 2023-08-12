@@ -1,19 +1,22 @@
-import './App.css';
+import "./App.css";
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
- import {Contextlogin} from "./context/Contextlogin"
+ import { AuthContext } from "./context/AuthContext";
 import Home from './pages/Home';
 import Reel from './pages/Reel';
 function App() {
+  const [userEmail, setUserEmail] = useState("");
+
   return (
-   <>
-    <BrowserRouter>
-    <Contextlogin.Provider>
-    <Routes>
-      <Route path='/' element={<Reel/>}/>
-    </Routes>
- </Contextlogin.Provider>
-    </BrowserRouter>
-   </>
+    <>
+      <BrowserRouter>
+        <AuthContext.Provider value={{ setUserEmail }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </AuthContext.Provider>
+      </BrowserRouter>
+    </>
   );
 }
 
