@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { RiMenuLine, RiCloseLine } from "react-icons/ri";
 import { useAuth0 } from "@auth0/auth0-react";
-
+import { useNavigate } from "react-router-dom";
 import "./navbar.css";
 
 const Menu = () => {
@@ -12,7 +12,7 @@ const Menu = () => {
         <a href="/explore">Explore</a>
       </p>
       <p>
-        <a href="/reels">Reels</a>
+        <a href="/reel">Reels</a>
       </p>
       <p>
         <a href="/stalls">Stalls</a>
