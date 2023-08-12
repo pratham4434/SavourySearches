@@ -5,7 +5,7 @@ import Footer from "../components/footer/Footer";
 import Cards from "../components/cardsection/Cards";
 // import LoginButton from "../components/Login";
 // import LogoutButton from "../components/LogoutButton";
-// import Profile from "../components/Profile";
+  import Profile from "../components/Profile";
 
 const Home = () => {
   return (
