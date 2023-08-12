@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
 // import savLogo from '../../assets/logo.svg';
-import './footer.css';
+import "./footer.css";
 
 const Footer = () => (
   <div className="sav__footer section__padding">
     <div className="sav__footer-heading">
-      <h1 className="gradient__text"> Elevating Small Food Vendors with Every Bite </h1>
+      <h1 className="gradient__text">
+        {" "}
+        Elevating Small Food Vendors with Every Bite{" "}
+      </h1>
     </div>
 
     <div className="sav__footer-btn">
@@ -15,7 +18,9 @@ const Footer = () => (
     <div className="sav__footer-links">
       <div className="sav__footer-links_logo">
         {/* <img src={savLogo} alt="sav_logo" /> */}
-        <p>Crechterwoord K12 182 DK Alknjkcb, <br /> All Rights Reserved</p>
+        <p>
+          Crechterwoord K12 182 DK Alknjkcb, <br /> All Rights Reserved
+        </p>
       </div>
       <div className="sav__footer-links_div">
         <h4>Links</h4>
