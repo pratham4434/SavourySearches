@@ -18,7 +18,9 @@ const Home = () => {
           {/* <Profile /> */}
         </div>
       </div>
-      <Footer />
+      <div className="gradient__bg">
+        <Footer />
+      </div>
     </>
   );
 };
