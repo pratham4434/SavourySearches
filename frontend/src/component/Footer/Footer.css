@@ -1,0 +1,43 @@
+.video-text {
+  position: absolute;
+  bottom: 13%;
+  color: #fff;
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.video-text > h3 {
+  margin-left: 20px;
+}
+.buttons{
+  background-color: red;
+  color: white;
+  padding: 3px 20px;
+  border-radius: 10px;
+  margin-left: 8px;
+}
+.buttons-following
+{
+  background-color: rgb(104, 102, 102);
+  color: white;
+  padding: 3px 20px;
+  border-radius: 10px;
+  margin-left: 8px;
+}
+.footer-buttons {
+  position: absolute;
+  bottom: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.footer-buttons svg{
+  height: 2rem;
+}
+
+.flex-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/navbar/Navbar";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
+import Cards from "../components/cardsection/Cards";
 
 const Home = () => {
   return (
@@ -12,7 +13,10 @@ const Home = () => {
           <Header />
         </div>
 
-        <div className="gradient__bg">{/* <Cards /> */}</div>
+        <div className="gradient__bg">
+          <Cards />
+          {/* <Profile /> */}
+        </div>
       </div>
       <Footer />
     </>

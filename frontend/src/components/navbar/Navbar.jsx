@@ -33,7 +33,6 @@ const Navbar = () => {
   };
   window.addEventListener("scroll", changeColor);
   const [toggleMenu, setToggleMenu] = useState(false);
-  // const [toggleAvatar, setToggleAvatar] = useState(true);
 
   return (
     <div className={color ? "sav__navbar sav__navbar-bg" : "sav__navbar"}>
@@ -64,7 +63,6 @@ const Navbar = () => {
         ) : (
           <>
             <button onClick={() => loginWithRedirect()} type="button">
-              {" "}
               Sign In
             </button>
           </>

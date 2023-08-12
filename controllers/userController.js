@@ -7,7 +7,7 @@ const dotenv=require("dotenv");
 dotenv.config();
 
 const registerUser=asyncHandler(async(req,res)=>{
-    const {_id,username,email,password,userType,userLocation}=req.body;
+    const {username,email,password}=req.body;
     try{
         const userExist=await userModel.findOne({username:username});
         if(userExist){
@@ -17,20 +17,18 @@ const registerUser=asyncHandler(async(req,res)=>{
         const hashPass=await bcrypt.hash(password,salt);
 
         const newUser=new userModel({
-            _id,
+           
             username,
             email,
             password:hashPass,
-            userType,
-            userLocation
         })
         const user =await newUser.save();
-        const token = jwt.sign(
-            { username: user.username, id: user._id },
-            process.env.JWT_KEY,
-            { expiresIn: "1h" }
-        );
-        res.status(200).json({ user, token });
+        // const token = jwt.sign(
+        //     { username: user.username, id: user._id },
+        //     process.env.JWT_KEY,
+        //     { expiresIn: "1h" }
+        // );
+        res.status(200).json({ user });
     }catch(error){
         res.status(500).json({message:error.message})
     }
@@ -45,11 +43,11 @@ const login=asyncHandler(async(req,res)=>{
             if(!validity){
                 res.status(400).json("wrong password");
             }else{
-                const token = jwt.sign(
-                { username: user.username, id: user._id },
-                process.env.JWT_KEY,
-                { expiresIn: "1h" });
-                res.status(200).json({ user, token });
+                // const token = jwt.sign(
+                // { username: user.username, id: user._id },
+                // process.env.JWT_KEY,
+                // { expiresIn: "1h" });
+                res.status(200).json({ user});
             }
         }else{
             res.status(500).json("user are not registered");
