@@ -1,22 +1,20 @@
-import './App.css';
+import "./App.css";
+import LoginButton from "./components/Login";
+import LogoutButton from "./components/LogoutButton";
+import Profile from "./components/Profile";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <p>Hello</p>
+        <LoginButton />
+        <br />
+        <LogoutButton />
+        <br />
+        <Profile />
+      </div>
+    </>
   );
 }
 
