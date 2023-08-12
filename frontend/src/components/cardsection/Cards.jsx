@@ -31,8 +31,8 @@ const Cards = () => {
       {cardsData.map((card) => (
         <div className="card" key={card.id}>
           <img src={card.image} alt={`Image ${card.id}`} />
-          <h3>{card.title}</h3>
-          <p>{card.description}</p>
+          <h3 className='card_title'>{card.title}</h3>
+          <p >{card.description}</p>
         </div>
       ))}
     </div>

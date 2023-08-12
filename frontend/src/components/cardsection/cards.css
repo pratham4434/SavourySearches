@@ -7,6 +7,10 @@
   }
   
   .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 300px;
     background-color: #e3eeb9;
     border-radius: 10px;
@@ -23,8 +27,13 @@
     border-radius: 10px;
   }
   
+  .card_title{
+    color: black;
+    font-weight: 700;
+  }
   .card:hover {
     transform: scale(1.05);
+    
   }
   
   .card img {
