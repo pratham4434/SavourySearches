@@ -1,5 +1,6 @@
 const asyncHandler=require("express-async-handler");
 const postStall=require("../lib/db/models/stallModel");
+const stallModel = require("../lib/db/models/stallModel");
 
 const createStall=asyncHandler(async(req,res)=>{
     try{
@@ -98,26 +99,43 @@ const addReportToStall=asyncHandler(async(req,res)=>{
 })
 const addStar = asyncHandler(async (req, res) => {
     const stallId = req.params.id;
-    const { rating } = req.body;
+    const { rating,email } = req.body;
     
     try {
       const stall = await postStall.findById(stallId);
       if (stall) {
         const ratings = stall.ratings || [];
+        const ratingBy=stall.ratingBy || [];
   
-        ratings.push(rating);
+        if(!ratingBy.includes(email)){
+            ratings.push(rating);
+            ratingBy.push(email);
 
-        const a=stall.ratings.reduce(add,0);
-        function add(accumulator,a){
-            return accumulator+a
+            const a=stall.ratings.reduce(add,0);
+            function add(accumulator,a){
+                return accumulator+a
+            }
+
+            // function findIndexByKey(ratingBy,key){
+            //     return array.reduce((accumulator,cV,index)=>{
+            //         if(cV===key){
+            //             return index;
+            //         }
+            //     })
+            // }
+
+            // const index=findIndexByKey(ratingBy,email)
+            console.log(a);
+            console.log(stall.ratings.length)
+            let c=a/stall.ratings.length;
+    
+            await stall.updateOne({ ratings });
+            await stall.updateOne({ ratingBy });
+    
+            res.status(200).json(c);
+        }else{
+            res.status(404).json("this user already rate the stall");
         }
-        console.log(a);
-        console.log(stall.ratings.length)
-        let c=a/stall.ratings.length;
-  
-        await stall.updateOne({ ratings });
-  
-        res.status(200).json(c);
       } else {
         res.status(403).json('Stall does not exist');
       }
@@ -126,6 +144,7 @@ const addStar = asyncHandler(async (req, res) => {
       console.error(error);
     }
 });
+
 module.exports={
     createStall,
     getStall,
