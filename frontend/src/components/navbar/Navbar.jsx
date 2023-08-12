@@ -17,6 +17,9 @@ const Menu = () => {
       <p>
         <a href="/stalls">Stalls</a>
       </p>
+      <p>
+        <a href="/stalls">Posts</a>
+      </p>
     </>
   );
 };
@@ -56,7 +59,7 @@ const Navbar = () => {
               type="button"
               className="bg-black"
             >
-              {" "}
+              
               Profile
             </button>
           </div>
