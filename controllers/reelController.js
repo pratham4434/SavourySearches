@@ -9,6 +9,7 @@ const createReel = asyncHandler(async (req, res) => {
     const reel = {
       video: `https://${process.env.AWS_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${videoName}`,
       caption: req.body.caption,
+      postedBy: req.body.postedBy,
     };
     await postReel.create(reel);
     res.status(200).json("posted successfully");
@@ -48,5 +49,5 @@ const likeReel = asyncHandler(async (req, res) => {
 module.exports = {
   createReel,
   likeReel,
-  getAllReel,
+  getAllReel
 };

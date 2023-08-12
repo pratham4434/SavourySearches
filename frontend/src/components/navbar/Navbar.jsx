@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import { RiMenuLine, RiCloseLine } from "react-icons/ri";
 import { useAuth0 } from "@auth0/auth0-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+
 import "./navbar.css";
 
 const Menu = () => {
@@ -25,7 +26,8 @@ const Menu = () => {
 };
 
 const Navbar = () => {
-  const { loginWithRedirect, isAuthenticated } = useAuth0();
+  const { user, loginWithRedirect, isAuthenticated } = useAuth0();
+  console.log(user);
   const [color, setColor] = useState(false);
   const changeColor = () => {
     if (window.scrollY >= 10) {
@@ -54,14 +56,11 @@ const Navbar = () => {
           <div className="avatar-div">
             {/* <div className="avatar"></div>
             <p>name</p> */}
-            <button
-              onClick={() => loginWithRedirect()}
-              type="button"
-              className="bg-black"
-            >
-              
-              Profile
-            </button>
+            <Link to={`/profile/${user.email}`}>
+              <button type="button" className="bg-black">
+                Profile
+              </button>
+            </Link>
           </div>
         ) : (
           <>

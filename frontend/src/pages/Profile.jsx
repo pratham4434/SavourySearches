@@ -1,30 +1,59 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 import { AuthContext } from "../context/AuthContext";
 import p1 from "../assets/ai.png";
 import Uploadreel from "../component/upload/Uploadreel";
 
 const Profile = () => {
-  const assets = [
-    {
-      url: p1,
-    },
-    {
-      url: p1,
-    },
-    {
-      url: p1,
-    },
-    {
-      url: p1,
-    },
-    {
-      url: p1,
-    },
-  ];
+  const [assets, setAssets] = useState([]);
+  const [reelsLoading, setReelsLoading] = useState(false);
+  const { emailid } = useParams();
+  console.log("emailid", emailid);
+
+  const loadAllReels = async () => {
+    setReelsLoading(true);
+    let config = {
+      method: "get",
+      maxBodyLength: Infinity,
+      url: `${process.env.REACT_APP_BACKENDURL}/auth/reels/${emailid}`,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    const reels = (await axios.request(config)).data;
+    console.log(reels);
+    setAssets(reels);
+    setReelsLoading(false);
+  };
+
+  useEffect(() => {
+    loadAllReels();
+  }, []);
+
+  // const assets = [
+  //   {
+  //     url: p1,
+  //   },
+  //   {
+  //     url: p1,
+  //   },
+  //   {
+  //     url: p1,
+  //   },
+  //   {
+  //     url: p1,
+  //   },
+  //   {
+  //     url: p1,
+  //   },
+  // ];
   const [follow, setFollow] = useState(false);
   const { user, isAuthenticated, isLoading } = useAuth0();
   const [open, setOpen] = useState(false);
+  console.log(user);
 
   const { setUserEmail } = useContext(AuthContext);
   setUserEmail(user?.email);
@@ -63,13 +92,13 @@ const Profile = () => {
               <div className="flex flex-col items-center my-4">
                 <div className="w-32  md:h-32 lg:h-32 bg-cover bg-center rounded-md ">
                   <img
-                    src="https://tuk-cdn.s3.amazonaws.com/assets/components/avatars/a_4_0.png"
+                    src={user.picture}
                     alt
                     className="cursor-pointer h-full w-full overflow-hidden object-cover rounded-full border-2 border-white dark:border-gray-700 shadow"
                   />
                 </div>
                 <h1 className="lg:text-2xl xl:text-2xl 2xl:text-2xl sm:text-xl text-lg font-bold my-3">
-                  Jyotiraditya mishra
+                  {user.name}
                 </h1>
               </div>
               {/* peronal details heading */}
@@ -97,15 +126,19 @@ const Profile = () => {
 
               <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
               <div className="flex flex-wrap justify-center">
-                {assets.map((list) => {
-                  return (
-                    <>
-                      <div className="w-1/3 h-1/3 m-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-7">
-                        <img src={list.url} />
-                      </div>
-                    </>
-                  );
-                })}
+                {reelsLoading ? (
+                  <>Loading...</>
+                ) : (
+                  assets.map((list) => {
+                    return (
+                      <>
+                        <div className="w-1/3 h-1/3 m-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-7">
+                          <video src={list.video} />
+                        </div>
+                      </>
+                    );
+                  })
+                )}
               </div>
             </div>
           </div>

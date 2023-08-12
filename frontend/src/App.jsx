@@ -10,20 +10,19 @@ import Reel from "./pages/Reel";
 import Stall from "./pages/Stall";
 function App() {
   const [userEmail, setUserEmail] = useState("");
-  console.log(userEmail);
   return (
     <>
       <BrowserRouter>
-        <AuthContext.Provider value={{ setUserEmail }}>
+        <AuthContext.Provider value={{ userEmail, setUserEmail }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/explore" element={<Explore />} />
             <Route path="/reels" element={<Home />} />
             <Route path="/stalls" element={<Home />} />
             <Route path="/addStall" element={<AddStall />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile/:emailid" element={<Profile />} />
             <Route path="/reel" element={<Reel />} />
-            <Route path="/stall" element={<Stall/>}/>
+            <Route path="/stall" element={<Stall />} />
           </Routes>
         </AuthContext.Provider>
       </BrowserRouter>
