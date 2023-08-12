@@ -9,20 +9,15 @@ const Menu = () => {
   return (
     <>
       <p>
-        <a href="#home">Home</a>
+        <a href="#">Explore</a>
       </p>
       <p>
-        <a href="#wsav">Why us?</a>
+        <a href="#">Reels</a>
       </p>
       <p>
-        <a href="#possibility">Ask a Question</a>
+        <a href="#">Stalls</a>
       </p>
-      <p>
-        <a href="#features">Case Studies</a>
-      </p>
-      <p>
-        <a href="#blog">Library</a>
-      </p>
+     
     </>
   );
 };
@@ -46,7 +41,7 @@ const Navbar = () => {
       <div className="sav__navbar-links">
         <div className="sav__navbar-links_logo">
           <p>
-            <a href="#home">SavourySearches</a>
+            <a href="#">SavourySearches</a>
           </p>
         </div>
         <div className="sav__navbar-links_container">

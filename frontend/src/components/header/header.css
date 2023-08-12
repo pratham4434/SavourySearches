@@ -1,0 +1,209 @@
+.sav__header {
+    display: flex;
+    flex-direction: row;
+}
+
+.sav__header-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    margin-right: 5rem;
+}
+
+.sav__header-content h1 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 62px;
+    line-height: 75px;
+    letter-spacing: -0.04em;
+}
+
+.sav__header-content p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--color-text);
+
+    margin-top: 1.5rem;
+}
+
+.sav__header-content__input {
+    width: 100%;
+    margin: 2rem 0 1rem;
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+.sav__header-content__input p {
+    flex: 1;
+    width: 100%;
+    /* min-height: 50px; */
+    
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    /* line-height: 28px; */
+    /* background: var(--color-footer); */
+    /* border: 2px solid var(--color-footer); */
+    padding: 0 1rem;
+    outline: none;
+    color: rgb(104, 104, 104);
+    font-weight: bold;
+
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.see-anchor{
+    display: flex;
+    flex-direction: row;
+}
+.sav__header-content__input-text{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1.3rem;
+    padding-left: 1rem;
+}
+.sav__header-content__input button {
+    /* flex: 0.6; */
+    /* width: 100%; */
+    min-height: 50px;
+    font-family: var(--font-family);
+    
+    cursor: pointer;
+    outline: none;
+
+    /* border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; */
+}
+.sav__header-content__input-ask{
+    font-weight: bolder;
+    font-size: 20px;
+    line-height: 20px;
+    background: #fdfdfd;
+    border: 2px solid #658864;
+    padding: 1.5rem 5rem;
+    color: #000;
+    margin-right: 2%;
+    border-radius: 12px;
+    width: 100%;
+}
+
+/* .sav__header-content__input-div{
+    padding-right: 10%;
+    width: 100%;
+} */
+
+.sav__header-content__input-play{
+    /* font-weight: 400; */
+    width: 4rem;
+    height: 4rem;
+    font-size: 30px;
+    /* line-height: 28px; */
+    background: #658864;
+    border: 2px solid #FFf;
+    padding: 0 1rem;
+    color: #fff;
+    border-radius: 50%;
+}
+.sav__header-content__people {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+
+    margin-top: 2rem;
+}
+
+.sav__header-content__people img {
+    width: 181.79px;
+    height: 38px;
+}
+
+.sav__header-content__people p {
+    margin: 0 0 0 1rem;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 38px;
+    color: rgb(129, 129, 129);
+    text-align: center;
+    
+}
+
+.sav__header-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* size: 110%; */
+    padding-top: 5rem;
+}
+
+.sav__header-image img {
+    width: 100%;
+    height: 100%;
+    /* animation: updown 3s linear infinite; */
+
+}
+
+@media screen and (max-width: 1050px) {
+    .sav__header {
+        flex-direction: column;
+    }
+
+    .sav__header-content {
+        margin: 0 0 3rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .sav__header-content h1 {
+        font-size: 48px;
+        line-height: 60px;
+    }
+
+    .sav__header-content p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    .sav__header-content__people {
+        flex-direction: column;
+    }
+
+    .sav__header-content__people p {
+        margin: 0;
+    }
+
+    .sav__header-content__input input,
+    .sav__header-content__input button {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .sav__header-content h1 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .sav__header-content p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .sav__header-content__input input,
+    .sav__header-content__input button {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
