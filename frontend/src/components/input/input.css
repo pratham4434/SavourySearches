@@ -1,0 +1,59 @@
+.input_section {
+  background-image: url("https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/health/wp-content/uploads/2022/01/foods_to_eat_to_lose_weight.jpeg");
+  object-fit: stretch;
+  height: 250px;
+  border: none;
+  border-radius: 100px 100px 0 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inp_bar {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  border: 8px #ffffff solid;
+  border-radius: 40px;
+  box-shadow: 0 5px 5px 0 #969696;
+
+}
+
+.input {
+  color: #282812;
+  font-size: larger;
+  font-weight: 500;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 1.5rem;
+  justify-content: center;
+  border: none;
+  border-radius: 40px;
+  margin: 14px;
+  outline: none;
+}
+
+.btn_search {
+  /* margin-top: 18px; */
+  /* padding: 0.5rem 1rem; */
+  color: #282812;
+  background: #ffffff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  /* height: 1.5rem; */
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+
+}

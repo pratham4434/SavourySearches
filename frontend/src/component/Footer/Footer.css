@@ -34,6 +34,7 @@
 }
 .footer-buttons svg{
   height: 2rem;
+  cursor: pointer;
 }
 
 .flex-box {
