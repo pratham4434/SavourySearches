@@ -1,5 +1,5 @@
 const express=require("express");
-const {createStall, getStall, updateStall, addCommentOnStall, getStallById, addStar, addReportToStall}=require('../controllers/stallController');
+const {createStall, getStall, updateStall, addCommentOnStall, getStallById, addStar, addReportToStall, searchStall}=require('../controllers/stallController');
 
 const router=express.Router();
 
@@ -17,5 +17,8 @@ router.route('/:id/report')
 
 router.route('/:id/comments')
 .post(addCommentOnStall)
+
+router.route('/search/:name')
+.get(searchStall)
 
 module.exports=router;
