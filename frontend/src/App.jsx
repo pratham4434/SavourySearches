@@ -1,16 +1,19 @@
 import "./App.css";
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Contextlogin } from "./context/AuthContext";
+import { AuthContext } from "./context/AuthContext";
 import Home from "./pages/Home";
 function App() {
+  const [userEmail, setUserEmail] = useState("");
+
   return (
     <>
       <BrowserRouter>
-        <Contextlogin.Provider>
+        <AuthContext.Provider value={{ setUserEmail }}>
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
-        </Contextlogin.Provider>
+        </AuthContext.Provider>
       </BrowserRouter>
     </>
   );
