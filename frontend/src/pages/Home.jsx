@@ -3,6 +3,7 @@ import Navbar from "../components/navbar/Navbar";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Cards from "../components/cardsection/Cards";
+import Input from "../components/input/Input";
 
 const Home = () => {
   return (
@@ -11,11 +12,11 @@ const Home = () => {
         <div className="gradient__bg">
           <Navbar />
           <Header />
+          <Input />
         </div>
 
         <div className="gradient__bg">
           <Cards />
-          {/* <Profile /> */}
         </div>
       </div>
       <div className="gradient__bg">
