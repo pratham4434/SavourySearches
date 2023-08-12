@@ -12,7 +12,7 @@ const Menu = () => {
         <a href="/explore">Explore</a>
       </p>
       <p>
-        <a href="/reels">Reels</a>
+        <a href="/reel">Reels</a>
       </p>
       <p>
         <a href="/stalls">Stalls</a>
