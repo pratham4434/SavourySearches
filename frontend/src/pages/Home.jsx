@@ -16,8 +16,11 @@ const Home = () => {
         </div>
         {/* <LoginButton /> */}
         {/* <LogoutButton /> */}
-        {/* <Profile /> */}
-        <div className="gradient__bg">{/* <Cards /> */}</div>
+
+        <div className="gradient__bg">
+          {/* <Cards /> */}
+          <Profile />
+        </div>
       </div>
       <Footer />
     </>

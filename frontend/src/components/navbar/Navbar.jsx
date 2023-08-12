@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 import { RiMenuLine, RiCloseLine } from "react-icons/ri";
+import { useAuth0 } from "@auth0/auth0-react";
 
 import "./navbar.css";
-
 
 const Menu = () => {
   return (
@@ -23,6 +23,8 @@ const Menu = () => {
 };
 
 const Navbar = () => {
+  const { loginWithRedirect, logout, user, isAuthenticated, isLoading } =
+    useAuth0();
   const [color, setColor] = useState(false);
 
   const changeColor = () => {
@@ -50,20 +52,16 @@ const Navbar = () => {
       </div>
       <div className="sav__navbar-sign">
         {toggleAvatar ? (
-          
-            <div className="avatar-div">
+          <div className="avatar-div">
             <div className="avatar"></div>
-              <p>name</p>
-            </div>
-          
+            <p>name</p>
+          </div>
         ) : (
           <>
-           
-              <p>Sign in</p>
-            
-            
-              <button type="button"> Sign up</button>
-           
+            <button onClick={() => loginWithRedirect()} type="button">
+              {" "}
+              Sign In
+            </button>
           </>
         )}
       </div>
@@ -86,7 +84,10 @@ const Navbar = () => {
             <div className="sav__navbar-menu_container-links">
               <Menu />
               <div className="sav__navbar-menu_container-links-sign">
-                <button type="button"> Sign up</button>
+                <button onClick={() => loginWithRedirect()} type="button">
+                  {" "}
+                  Sign In
+                </button>
               </div>
             </div>
           </div>
