@@ -7,6 +7,7 @@ import Explore from "./pages/Explore";
 import Profile from "./pages/Profile";
 import AddStall from "./pages/AddStall";
 import Reel from "./pages/Reel";
+import Stall from "./pages/Stall";
 function App() {
   const [userEmail, setUserEmail] = useState("");
   console.log(userEmail);
@@ -22,6 +23,7 @@ function App() {
             <Route path="/addStall" element={<AddStall />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/reel" element={<Reel />} />
+            <Route path="/stall" element={<Stall/>}/>
           </Routes>
         </AuthContext.Provider>
       </BrowserRouter>
