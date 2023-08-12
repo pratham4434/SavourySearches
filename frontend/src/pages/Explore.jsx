@@ -1,10 +1,11 @@
 import React from "react";
+import Map from "../components/Map";
 
 const Explore = () => {
   return (
     <>
       <div>
-        <p>Explore Section</p>
+        <Map />
       </div>
     </>
   );
