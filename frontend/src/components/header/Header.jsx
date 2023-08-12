@@ -6,6 +6,7 @@ import "./header.css";
 const Header = () => (
   <div className="sav__header section__padding" id="home">
     <div className="sav__header-content">
+    {/* <div className="hollow_circle"></div> */}
       <h1 className="gradient__text">Street Bites Spotlight </h1>
       <h1 className="gradient__text"> Where Flavor Meets the Map </h1>
       <p>
