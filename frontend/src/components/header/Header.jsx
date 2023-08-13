@@ -4,25 +4,26 @@ import ai from "../../assets/ai2.png";
 import "./header.css";
 import ReactLoading from "react-loading";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Header = () => {
- 
   return (
-    <motion.div variants={{
-      hidden: { opacity: 0, y: 5 },
-      visible: { opacity: 1, y: 0 },
-    }}
-    initial="hidden"
-    animate="visible"
-    transition={{
-      ease: "linear",
-      duration: 0.5,
-      x: { duration: 2 },
-    }} className="sav__header section__padding" id="home">
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 5 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate="visible"
+      transition={{
+        ease: "linear",
+        duration: 0.5,
+        x: { duration: 2 },
+      }}
+      className="sav__header section__padding"
+      id="home"
+    >
       <div className="sav__header-content">
-      
-       
-        
         <motion.h1
           variants={{
             hidden: { opacity: 0, y: 75 },
@@ -53,8 +54,7 @@ const Header = () => {
           }}
           className="gradient__text"
         >
-          {" "}
-          Where Flavor Meets the Map{" "}
+          Where Flavor Meets the Map
         </motion.h1>
         <p>
           Locate. Savor. Share. Your Guide to Local Food Wonders and Vendor
@@ -64,9 +64,11 @@ const Header = () => {
 
         <div className="sav__header-content__input">
           <div className="sav__header-content__input-div">
-            <button className="sav__header-content__input-ask" type="button">
-              Explore
-            </button>
+            <Link to="/explore">
+              <button className="sav__header-content__input-ask" type="button">
+                Explore
+              </button>
+            </Link>
           </div>
 
           <a className="see-anchor" href="#features"></a>

@@ -44,7 +44,6 @@ const Reel = () => {
     });
   };
   let observer = new IntersectionObserver(callback, { threshold: 0.6 });
-
   return (
     <>
     
@@ -55,11 +54,10 @@ const Reel = () => {
           <img alt="logo" src={Logo} className="insta-logo" />
         </div>
         <h3>Reel</h3> */}
-          {/*  */}
-
+         
+          
           <div className="video-container" id="video-container">
             {/*  */}
-
             {data.map((item) => (
               <div className="videos">
                 <Video
@@ -73,7 +71,6 @@ const Reel = () => {
                 />
               </div>
             ))}
-
             {/*  */}
           </div>
         </center>

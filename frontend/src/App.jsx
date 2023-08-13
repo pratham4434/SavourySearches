@@ -34,7 +34,7 @@ function App() {
             <Route path="/addStall" element={<AddStall />} />
             <Route path="/profile/:emailid" element={<Profile />} />
             <Route path="/reel" element={<Reel />} />
-            <Route path="/stall" element={<Stall />} />
+            <Route path="/stall/:stallid" element={<Stall />} />
             <Route path="/searching/:term" element={<Stalls />} />
           </Routes>
           {/* <Footer/> */}

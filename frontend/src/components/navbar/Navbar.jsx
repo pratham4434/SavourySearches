@@ -18,11 +18,9 @@ const Menu = () => {
         <a href="/reel">Reels</a>
       </p>
       <p>
-        <a href="/stalls">Stalls</a>
+        <a href="#stalls">Stalls</a>
       </p>
-      <p>
-        <a href="/stalls">Posts</a>
-      </p>
+      
     </>
   );
 };
@@ -49,10 +47,8 @@ const Navbar = () => {
 <div className={color ? "sav__navbar sav__navbar-bg" : "sav__navbar"}>
       <div className="sav__navbar-links">
         <div className="sav__navbar-links_logo">
-          <p className="cursor-pointer " >
+          <p><Link to="/">SavourySearches</Link>
             
-            
-            <a href="/">SavourySearches</a>
           </p>
         </div>
         <div className="sav__navbar-links_container">

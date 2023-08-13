@@ -5,6 +5,7 @@ import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css";
 import "./map.css";
 import { AiFillStar } from "react-icons/ai";
 import axios from "axios";
+import Navbar from "./navbar/Navbar";
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
@@ -457,6 +458,8 @@ const Map = () => {
 
   return (
     <>
+     
+
       <div class="h-screen flex w-full bg-black">
         <div class="bg-slate-200 w-1/3 p-2 flex flex-col shadow-xl overflow-y-scroll">
           <div class="bg-white p-5 rounded-lg w-full mb-2 h-fit flex justify-center font-semibold text-xl sticky top-0 shadow-xl">

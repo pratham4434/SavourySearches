@@ -56,7 +56,7 @@ const Cards = () => {
         {cardsData.map((card) => (
           <div className="card" key={card.id}>
             <img src={card.image} alt={`Image ${card.id}`} />
-            <div className="flex">
+            <div className="flex2">
               <h3 className="card_title">{card.title}</h3>
               <p className="aa">{card.description}</p>
               <div className="btn_stall">
