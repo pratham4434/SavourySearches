@@ -10,7 +10,8 @@ const Menu = () => {
   return (
     <>
       <p>
-        <a href="/explore">Explore</a>
+      <Link to="/explore">Explore</Link>
+        {/* <a href="/explore"></a> */}
       </p>
       <p>
         <a href="/reel">Reels</a>
@@ -31,7 +32,6 @@ const Navbar = () => {
   const login = () => {
     loginWithRedirect();
   };
-  console.log(user);
   const [color, setColor] = useState(false);
   const changeColor = () => {
     if (window.scrollY >= 10) {

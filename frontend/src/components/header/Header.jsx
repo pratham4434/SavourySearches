@@ -6,7 +6,7 @@ import ReactLoading from "react-loading";
 import { motion } from "framer-motion";
 
 const Header = () => {
-  // const [data, setData] = useState(true);
+ 
   return (
     <motion.div variants={{
       hidden: { opacity: 0, y: 5 },
@@ -21,13 +21,7 @@ const Header = () => {
     }} className="sav__header section__padding" id="home">
       <div className="sav__header-content">
       
-        {/* {data ? (
-          <div>
-            <ReactLoading type="bars" color="#969696" height={100} width={50} />
-          </div>
-        ) : (
-          <div>false</div>
-        )} */}
+       
         
         <motion.h1
           variants={{

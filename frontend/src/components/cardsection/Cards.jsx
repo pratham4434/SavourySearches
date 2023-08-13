@@ -47,7 +47,7 @@ const Cards = () => {
         animate="visible"
         transition={{
           ease: "linear",
-          delay:1,
+          delay: 1,
           duration: 0.5,
           x: { duration: 1 },
         }}
@@ -59,9 +59,11 @@ const Cards = () => {
             <div className="flex">
               <h3 className="card_title">{card.title}</h3>
               <p className="aa">{card.description}</p>
-              <button type="button" className="btn_stall">
-                View Stall
-              </button>
+              <div className="btn_stall">
+                <button type="button" >
+                  View Stall
+                </button>
+              </div>
             </div>
           </div>
         ))}

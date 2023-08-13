@@ -21,6 +21,7 @@ const Stalls = () => {
         `${process.env.REACT_APP_BACKENDURL}/poststall/search/${term}`
       )
     ).data;
+    console.log(res);
     setCardsData(res);
     setIsLoading(false);
   };
@@ -63,8 +64,8 @@ const Stalls = () => {
               ) : (
                 cardsData.map((card) => (
                   <div className="card" key={card.id}>
-                    <img src={card.image} alt={`Image ${card.id}`} />
-                    <div className="flex">
+                    <img src={ai2} alt={`Image ${card.id}`} />
+                    <div className="flex2">
                       <h3 className="card_title">{card.title}</h3>
                       <p>{card.description}</p>
                       <p className="star">

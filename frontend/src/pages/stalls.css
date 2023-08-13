@@ -70,7 +70,7 @@
     word-wrap: break-word;
   }
   
-  .flex {
+  .flex2 {
     margin-top: 5%;
     display: flex;
     flex-direction: column;
@@ -105,6 +105,7 @@
     cursor: pointer;
     border-radius: 5px;
   }
+  
   .btn_stall:hover {
     transform: scale(1.05);
     border: solid 2px;

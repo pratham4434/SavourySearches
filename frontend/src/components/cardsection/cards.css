@@ -74,8 +74,8 @@
 .btn_stall {
   margin-top: 18px;
   padding: 0.5rem 1rem;
-  color: #fff;
-  background: #a8e1a6;
+  /* color: #fff; */
+  background-color: #a8e1a6;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 18px;
