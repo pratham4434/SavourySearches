@@ -27,6 +27,10 @@ const Menu = () => {
 
 const Navbar = () => {
   const { user, loginWithRedirect, isAuthenticated } = useAuth0();
+
+  const login = () => {
+    loginWithRedirect();
+  };
   console.log(user);
   const [color, setColor] = useState(false);
   const changeColor = () => {
@@ -64,7 +68,7 @@ const Navbar = () => {
           </div>
         ) : (
           <>
-            <button onClick={() => loginWithRedirect()} type="button">
+            <button onClick={() => login()} type="button">
               Sign In
             </button>
           </>
@@ -89,7 +93,7 @@ const Navbar = () => {
             <div className="sav__navbar-menu_container-links">
               <Menu />
               <div className="sav__navbar-menu_container-links-sign">
-                <button onClick={() => loginWithRedirect()} type="button">
+                <button onClick={() => login()} type="button">
                   {" "}
                   Sign In
                 </button>

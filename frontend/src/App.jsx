@@ -1,7 +1,8 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthContext } from "./context/AuthContext";
+import { useAuth0 } from "@auth0/auth0-react";
 import Home from "./pages/Home";
 import Explore from "./pages/Explore";
 import Profile from "./pages/Profile";
@@ -10,6 +11,12 @@ import Reel from "./pages/Reel";
 import Stall from "./pages/Stall";
 function App() {
   const [userEmail, setUserEmail] = useState("");
+  const { isAuthenticated, user } = useAuth0();
+  useEffect(() => {
+    if (isAuthenticated) {
+      localStorage.setItem("userEmail", user.email);
+    }
+  });
   return (
     <>
       <BrowserRouter>

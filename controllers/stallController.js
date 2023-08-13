@@ -116,15 +116,7 @@ const addStar = asyncHandler(async (req, res) => {
                 return accumulator+a
             }
 
-            // function findIndexByKey(ratingBy,key){
-            //     return array.reduce((accumulator,cV,index)=>{
-            //         if(cV===key){
-            //             return index;
-            //         }
-            //     })
-            // }
-
-            // const index=findIndexByKey(ratingBy,email)
+            
             console.log(a);
             console.log(stall.ratings.length)
             let c=a/stall.ratings.length;

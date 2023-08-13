@@ -3,8 +3,7 @@ import ReactDom from "react-dom";
 import Footer from "./Footer/Footer";
 // import Video1 from './Video1';
 import "./Video.css";
-const Video = ({ channel, song, url, likes, comment, shares }) => {
-  console.log(url);
+const Video = ({ channel, song, url, likes, comment, shares, id }) => {
   const [isVideoPlaying, setisVideoPlaying] = useState(false);
 
   const vidRef = useRef();
@@ -39,6 +38,7 @@ const Video = ({ channel, song, url, likes, comment, shares }) => {
           likes={likes}
           shares={shares}
           videoUrl={url}
+          id={id}
         />
       </div>
     </>

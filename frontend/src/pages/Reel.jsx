@@ -18,7 +18,6 @@ const Reel = () => {
     };
 
     const res = await axios.request(config);
-    console.log(res.data);
     setData(res.data);
   };
 
@@ -58,15 +57,16 @@ const Reel = () => {
           <div className="video-container" id="video-container">
             {/*  */}
 
-            {data.map((list, i) => (
+            {data.map((item) => (
               <div className="videos">
                 <Video
-                  key={i}
+                  key={item._id}
                   // channel={list.channel}
-                  song={list.postedBy}
-                  url={list.video}
-                  likes={list.like}
-                  shares={list.shares}
+                  song={item.postedBy}
+                  url={item.video}
+                  likes={item.like}
+                  shares={item.shares}
+                  id={item._id}
                 />
               </div>
             ))}

@@ -11,6 +11,7 @@ const Profile = () => {
   const [reelsLoading, setReelsLoading] = useState(false);
   const { emailid } = useParams();
   console.log("emailid", emailid);
+  
 
   const loadAllReels = async () => {
     setReelsLoading(true);
@@ -31,6 +32,7 @@ const Profile = () => {
 
   useEffect(() => {
     loadAllReels();
+    
   }, []);
 
   // const assets = [
@@ -55,8 +57,9 @@ const Profile = () => {
   const [open, setOpen] = useState(false);
   console.log(user);
 
-  const { setUserEmail } = useContext(AuthContext);
+  const { setUserEmail, userEmail } = useContext(AuthContext);
   setUserEmail(user?.email);
+  localStorage.setItem("userEmail", userEmail)
 
   if (isLoading) {
     return <div>Loading ...</div>;

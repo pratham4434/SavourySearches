@@ -31,14 +31,14 @@ const getAllReel = asyncHandler(async (req, res) => {
 
 const likeReel = asyncHandler(async (req, res) => {
   const id = req.params.id;
-  const { userId } = req.body;
+  const { email } = req.body;
   try {
     const post = await postReel.findById(id);
-    if (post.like.includes(userId)) {
-      await post.updateOne({ $pull: { like: userId } });
+    if (post.like.includes(email)) {
+      await post.updateOne({ $pull: { like: email } });
       res.status(200).json("Post disliked");
     } else {
-      await post.updateOne({ $push: { like: userId } });
+      await post.updateOne({ $push: { like: email } });
       res.status(200).json("Post liked");
     }
   } catch (error) {
