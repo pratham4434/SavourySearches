@@ -44,9 +44,10 @@
     -webkit-text-fill-color: transparent;
   }
   .gradient__text h1 {
-   padding: 0px;
+   padding: 1rem;
    margin: 0px;
    line-height: 50px;
+   
   }
 
   .section__padding {

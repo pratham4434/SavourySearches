@@ -6,7 +6,7 @@ import { GoStarFill } from "react-icons/go";
 import ai2 from "../assets/stall2.png";
 import { motion } from "framer-motion";
 import Input from "../components/input/Input";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
 const Stalls = () => {
@@ -64,9 +64,9 @@ const Stalls = () => {
               ) : (
                 cardsData.map((card) => (
                   <div className="card" key={card.id}>
-                    <img src={ai2} alt={`Image ${card.id}`} />
+                    <img src={card.stallImage[0]} alt={`Image ${card.id}`} />
                     <div className="flex2">
-                      <h3 className="card_title">{card.title}</h3>
+                      <h3 className="card_title">{card.stallname}</h3>
                       <p>{card.description}</p>
                       <p className="star">
                         <GoStarFill />
@@ -75,9 +75,11 @@ const Stalls = () => {
                         <GoStarFill />
                         <GoStarFill />
                       </p>
-                      <button type="button" className="btn_stall">
-                        View Stall
-                      </button>
+                      <Link to={`/stall/${card._id}`}>
+                        <button type="button" className="btn_stall">
+                          View Stall
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 ))

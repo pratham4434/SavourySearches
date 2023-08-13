@@ -19,9 +19,7 @@ const Menu = () => {
       <p>
         <a href="#stalls">Stalls</a>
       </p>
-      <p>
-        <a href="/stalls">Posts</a>
-      </p>
+      
     </>
   );
 };

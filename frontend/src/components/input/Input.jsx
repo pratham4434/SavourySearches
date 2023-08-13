@@ -5,6 +5,7 @@ import "./input.css";
 import { fetchDataFromApi } from "./api";
 import { motion } from "framer-motion";
 import { PiMagnifyingGlassBold } from "react-icons/pi";
+import axios from "axios";
 const Input = () => {
   const [queryInput, setQueryInput] = useState("");
   const navigate = useNavigate();
@@ -12,20 +13,24 @@ const Input = () => {
   const [loading, setLoading] = useState(false);
   const { query } = useParams();
 
+  const searchHandler = () => {
+    navigate(`/searching/${queryInput}`);
+  };
   const searchQueryHandler = (event) => {
     if (event.key === "Enter" && queryInput.length > 0) {
-      navigate(`/searching/${queryInput}`);
+      searchHandler();
     }
   };
 
-  const fetchInitialData = () => {
-    setLoading(true);
-    fetchDataFromApi(`/searching/multi?query=${query}`).then((res) => {
-      setData(res);
+  // const fetchInitialData = () => {
+  //   setLoading(true);
+  //   fetchDataFromApi(`/searching/multi?query=${query}`).then((res) => {
+  //     setData(res);
 
-      setLoading(false);
-    });
-  };
+  //     setLoading(false);
+  //   });
+  // };
+
   useEffect(() => {
     // fetchInitialData();
   }, [queryInput]);
@@ -54,7 +59,7 @@ const Input = () => {
           onKeyUp={searchQueryHandler}
         />
         <div className="btn_search">
-          <button>
+          <button onClick={searchHandler}>
             <PiMagnifyingGlassBold />
           </button>
         </div>
