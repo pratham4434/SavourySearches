@@ -10,7 +10,8 @@ const Menu = () => {
   return (
     <>
       <p>
-        <a href="/explore">Explore</a>
+      <Link to="/explore">Explore</Link>
+        {/* <a href="/explore"></a> */}
       </p>
       <p>
         <a href="/reel">Reels</a>
@@ -47,7 +48,7 @@ const Navbar = () => {
       <div className="sav__navbar-links">
         <div className="sav__navbar-links_logo">
           <p>
-            <a href="/">SavourySearches</a>
+            SavourySearches
           </p>
         </div>
         <div className="sav__navbar-links_container">
