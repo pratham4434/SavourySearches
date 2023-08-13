@@ -60,7 +60,7 @@ export default function Footer({
     <div className="video-footer">
       <div className="video-text">
         <h3>
-          {channel} . ({song})
+          {channel}  ({song})
           {/* {!Follow ? (
             <button
               onClick={() => {
@@ -84,7 +84,7 @@ export default function Footer({
             xmlns="http://www.w3.org/2000/svg"
             onClick={likeClicked}
             style={{
-              fill: like ? "blue" : "white",
+              fill: like ? "blue" : "green",
             }}
             viewBox="0 0 24 24"
             fill="currentColor"

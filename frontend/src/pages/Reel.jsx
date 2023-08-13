@@ -49,7 +49,7 @@ const Reel = () => {
     <>
     
       <div className="App">
-        <Logo/>
+        {/* <Logo/> */}
         <center>
           {/* <div className="logo">
           <img alt="logo" src={Logo} className="insta-logo" />

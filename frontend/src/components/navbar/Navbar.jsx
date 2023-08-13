@@ -7,6 +7,7 @@ import { useNavigate, Link } from "react-router-dom";
 import "./navbar.css";
 
 const Menu = () => {
+  const navigate=useNavigate();
   return (
     <>
       <p>
@@ -44,11 +45,14 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <div className={color ? "sav__navbar sav__navbar-bg" : "sav__navbar"}>
+<div className="">
+<div className={color ? "sav__navbar sav__navbar-bg" : "sav__navbar"}>
       <div className="sav__navbar-links">
         <div className="sav__navbar-links_logo">
-          <p>
-            SavourySearches
+          <p className="cursor-pointer " >
+            
+            
+            <a href="/">SavourySearches</a>
           </p>
         </div>
         <div className="sav__navbar-links_container">
@@ -103,6 +107,8 @@ const Navbar = () => {
         )}
       </div>
     </div>
+</div>
+
   );
 };
 
