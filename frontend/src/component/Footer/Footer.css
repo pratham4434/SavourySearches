@@ -1,23 +1,25 @@
 .video-text {
   position: absolute;
   bottom: 13%;
+  width: 100%;
   color: #fff;
   display: flex;
   margin-bottom: 60px;
+  justify-content: center;
+  align-items: center;
 }
 
-.video-text > h3 {
-  margin-left: 20px;
+.video-text > h2 {
+  margin: 2rem;
 }
-.buttons{
+.buttons {
   background-color: red;
   color: white;
   padding: 3px 20px;
   border-radius: 10px;
   margin-left: 8px;
 }
-.buttons-following
-{
+.buttons-following {
   background-color: rgb(104, 102, 102);
   color: white;
   padding: 3px 20px;
@@ -26,19 +28,41 @@
 }
 .footer-buttons {
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
 }
-.footer-buttons svg{
-  height: 2rem;
+.footer-buttons svg {
+  height: 3rem;
   cursor: pointer;
 }
 
 .flex-box {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content:space-around;
+}
+
+.flex-box svg {
+  background-color: rgb(173, 173, 173);
+  border-radius: 50%;
+  height: 3.5rem;
+  width: 3.5rem;
+  padding: 8px;
+  
+}
+
+.reels_id-name {
+  padding: 1rem;
+  font-size: larger;
+  background-color: rgb(255, 176, 127);
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.other_css {
+  margin: 2rem;
 }

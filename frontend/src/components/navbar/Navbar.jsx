@@ -17,7 +17,7 @@ const Menu = () => {
         <a href="/reel">Reels</a>
       </p>
       <p>
-        <a href="/stalls">Stalls</a>
+        <a href="#stalls">Stalls</a>
       </p>
       <p>
         <a href="/stalls">Posts</a>
@@ -47,8 +47,8 @@ const Navbar = () => {
     <div className={color ? "sav__navbar sav__navbar-bg" : "sav__navbar"}>
       <div className="sav__navbar-links">
         <div className="sav__navbar-links_logo">
-          <p>
-            SavourySearches
+          <p><Link to="/">SavourySearches</Link>
+            
           </p>
         </div>
         <div className="sav__navbar-links_container">

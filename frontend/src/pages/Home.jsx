@@ -15,7 +15,7 @@ const Home = () => {
           <Input />
         </div>
 
-        <div className="gradient__bg">
+        <div id= 'stalls' className="gradient__bg">
           <Cards />
         </div>
       </div>
