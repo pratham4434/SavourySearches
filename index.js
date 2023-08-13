@@ -2,10 +2,11 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+const multer = require("multer");
 const connectToDb = require("./lib/db/db");
-const AuthRoute=require("./routes/userRoutes");
-const PostRoute=require("./routes/reelRoutes");
-const postStall=require('./routes/stallRoutes');
+const AuthRoute = require("./routes/userRoutes");
+const PostRoute = require("./routes/reelRoutes");
+const postStall = require("./routes/stallRoutes");
 
 const port = 5000 || process.env.PORT;
 
@@ -19,9 +20,13 @@ app.get("/test", (req, res) => {
   res.send("hello!!!!");
 });
 
-app.use('/auth',AuthRoute);
-app.use('/postreel',PostRoute);
-app.use('/poststall',postStall);
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
+
+app.use("/auth", AuthRoute);
+//the name value for input tag should be "reel"
+app.use("/postreel", upload.single("reel"), PostRoute);
+app.use("/poststall", postStall);
 
 //all api routes->
 

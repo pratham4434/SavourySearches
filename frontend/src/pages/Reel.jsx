@@ -1,50 +1,40 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./reel.css";
 import Video from "../component/Video";
-import videos1 from "../data/videos/vid1.mp4";
-import videos2 from "../data/videos/vid2.mp4";
+// import videos1 from "../data/videos/vid1.mp4";
+// import videos2 from "../data/videos/vid2.mp4";
 
-import videos3 from "../data/videos/vid3.mp4";
+// import videos3 from "../data/videos/vid3.mp4";
 
 const Reel = () => {
-  const data = [
-    {
-      channel: "aaa",
-      song: "song-1",
-      url: videos1,
-      likes: "32",
-      comment: "2",
-      shares: "23",
-    },
-    {
-      channel: "bbb",
-      song: "song-2",
-      url: videos2,
-      likes: "3",
-      comment: "22",
-      shares: "23",
-    },
-    {
-      channel: "ccc",
-      song: "song-3",
-      url: videos3,
-      likes: "89",
-      comment: "23",
-      shares: "29",
-    },
-  ];
+  const [data, setData] = useState([]);
+  const fetchReels = async () => {
+    let config = {
+      method: "get",
+      maxBodyLength: Infinity,
+      url: `${process.env.REACT_APP_BACKENDURL}/postreel`,
+      headers: {},
+    };
+
+    const res = await axios.request(config);
+    setData(res.data);
+  };
 
   useEffect(() => {
+    fetchReels();
+
     const elements = document.querySelectorAll(".videos");
     elements.forEach((element) => {
       observer.observe(element);
     });
   }, []);
+
   const callback = (entries) => {
     entries.forEach((entry) => {
       const e = entry.target.childNodes[0];
       const videoElement = e.childNodes[0];
-      console.log(videoElement)
+      console.log(videoElement);
       videoElement.play().then(() => {
         if (!videoElement.paused && !entry.isIntersecting) {
           videoElement.pause();
@@ -67,16 +57,16 @@ const Reel = () => {
           <div className="video-container" id="video-container">
             {/*  */}
 
-            {data.map((list, i) => (
+            {data.map((item) => (
               <div className="videos">
                 <Video
-                  key={i}
-                  channel={list.channel}
-                  song={list.song}
-                  url={list.url}
-                  likes={list.likes}
-                  comment={list.comment}
-                  shares={list.shares}
+                  key={item._id}
+                  // channel={list.channel}
+                  song={item.postedBy}
+                  url={item.video}
+                  likes={item.like}
+                  shares={item.shares}
+                  id={item._id}
                 />
               </div>
             ))}
