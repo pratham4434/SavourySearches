@@ -4,9 +4,6 @@ Built at [StatusCode 0](https://hackathon.iiitkalyani.ac.in/#)  in 30 hrs !
 
 Watch the demo video [here](https://www.youtube.com/watch?v=REpp8VCX1NE&ab_channel=TrojanBoi) 
 
-[![Watch the video]()]()
-
-
 
 
 ### "Savoury Searches" - A Web-App Solution for Food Enthusiasts and Explorers 🍔🌮🍟
