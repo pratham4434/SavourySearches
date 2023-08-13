@@ -1,8 +1,9 @@
 .video-text {
   position: absolute;
   bottom: 13%;
-  color: #fff;
+  color: #f2eeee;
   display: flex;
+  font-weight: 800;
   margin-bottom: 60px;
 }
 
@@ -26,14 +27,14 @@
 }
 .footer-buttons {
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
 }
 .footer-buttons svg{
-  height: 2rem;
+  height: 3rem;
   cursor: pointer;
 }
 

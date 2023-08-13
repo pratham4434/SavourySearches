@@ -30,6 +30,7 @@ const Video = ({ channel, song, url, likes, comment, shares, id }) => {
           src={url}
           muted="muted"
           loop
+          autoPlay
           onEnded={handlescroll}
         />
         <Footer

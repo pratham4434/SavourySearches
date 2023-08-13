@@ -9,6 +9,7 @@ import Profile from "./pages/Profile";
 import AddStall from "./pages/AddStall";
 import Reel from "./pages/Reel";
 import Stall from "./pages/Stall";
+import Logo from "./component/Logo"
 function App() {
   const [userEmail, setUserEmail] = useState("");
   const { isAuthenticated, user } = useAuth0();
@@ -30,6 +31,8 @@ function App() {
             <Route path="/profile/:emailid" element={<Profile />} />
             <Route path="/reel" element={<Reel />} />
             <Route path="/stall" element={<Stall />} />
+            <Route path="/logo" element={<Logo />} />
+
           </Routes>
         </AuthContext.Provider>
       </BrowserRouter>

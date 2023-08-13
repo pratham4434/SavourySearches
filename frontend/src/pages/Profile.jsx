@@ -5,6 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { AuthContext } from "../context/AuthContext";
 import p1 from "../assets/ai.png";
 import Uploadreel from "../component/upload/Uploadreel";
+import Logo from "../component/Logo";
 
 const Profile = () => {
   const [assets, setAssets] = useState([]);
@@ -67,18 +68,19 @@ const Profile = () => {
 
   return (
     <>
+    <Logo/>
       {open ? (
         <Uploadreel />
       ) : (
         // isAuthenticated && (
-        <div>
+        <div className="snap-center">
           {/* <img src={user.picture} alt={user.name} />
             <h2>{user.name}</h2>
             <p>{user.email}</p> */}
-          <div className=" h-auto flex justify-center items-center  my-5">
+          <div className=" flex   my-10">
             <div className=" pb-8 shadow-xl shadow-btn-color md:w-2/4 lg:w-2/4 xl:w-2/4 w-4/5 md:h-3/5 lg:h-3/5 xl:h-3/5 h-1/4 rounded-lg bg-card-color">
               {/* heading edit and personal details */}
-              <div className="flex justify-between m-4 ">
+              <div className="flex flex-row justify-around  m-4 ">
                 <h3 className="font-semibold underline underline-offset-8 ">
                   Profile details
                 </h3>
@@ -105,7 +107,7 @@ const Profile = () => {
                 </h1>
               </div>
               {/* peronal details heading */}
-              <div className="flex justify-around">
+              <div className="flex flex-row justify-around">
                 <button
                   type="button"
                   class="inline-flex items-center ml-5 px-5 py-2.5 text-sm font-medium text-center text-white bg-red-700 rounded-lg"
@@ -128,14 +130,14 @@ const Profile = () => {
               {/* uploaded section details */}
 
               <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-              <div className="flex flex-wrap justify-center">
+              <div className="flex flex-row m-5 flex-wrap justify-center">
                 {reelsLoading ? (
                   <>Loading...</>
                 ) : (
                   assets.map((list) => {
                     return (
                       <>
-                        <div className="w-1/3 h-1/3 m-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-7">
+                        <div className="w-1/4 h-1/4 flex m-5 rounded-sm bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 ">
                           <video src={list.video} />
                         </div>
                       </>

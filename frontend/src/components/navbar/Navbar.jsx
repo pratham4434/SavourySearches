@@ -31,7 +31,6 @@ const Navbar = () => {
   const login = () => {
     loginWithRedirect();
   };
-  console.log(user);
   const [color, setColor] = useState(false);
   const changeColor = () => {
     if (window.scrollY >= 10) {
@@ -48,7 +47,7 @@ const Navbar = () => {
       <div className="sav__navbar-links">
         <div className="sav__navbar-links_logo">
           <p>
-            <a href="#">SavourySearches</a>
+            <a href="/">SavourySearches</a>
           </p>
         </div>
         <div className="sav__navbar-links_container">
