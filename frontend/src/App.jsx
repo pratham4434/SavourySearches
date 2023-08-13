@@ -9,6 +9,7 @@ import Profile from "./pages/Profile";
 import AddStall from "./pages/AddStall";
 import Reel from "./pages/Reel";
 import Stall from "./pages/Stall";
+import Logo from "./component/Logo"
 import Stalls from "./pages/Stalls";
 function App() {
   const [userEmail, setUserEmail] = useState("");

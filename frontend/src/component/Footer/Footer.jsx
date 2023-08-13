@@ -19,6 +19,7 @@ export default function Footer({
   const { user } = useAuth0();
   const [like, setLike] = useState(false);
   const [share, setShare] = useState(false);
+  const [copy, setCopy] = useState(false);
 
   // let config = {
   //   headers: {
@@ -49,6 +50,12 @@ export default function Footer({
     }
   }, []);
 
+  const handler=async()=>{
+    const copy=await(navigator.clipboard.writeText(videoUrl));
+    setCopy(true);
+    alert("copy is done")
+    console.log(copy);
+  }
   return (
     <div className="video-footer">
       {/*  */}
@@ -121,8 +128,10 @@ export default function Footer({
                     <div className="relative p-6 flex-auto">
                       <div>
                         <label
+                        onClick={handler}
                           type="text"
                           id="first_name"
+                          value='ashu'
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         >
                           {videoUrl}
@@ -130,7 +139,7 @@ export default function Footer({
                       </div>
                     </div>
                     {/*footer*/}
-                    <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+               <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                       <button
                         className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./reel.css";
 import Video from "../component/Video";
+import Logo from "../component/Logo";
 // import videos1 from "../data/videos/vid1.mp4";
 // import videos2 from "../data/videos/vid2.mp4";
 
@@ -45,7 +46,9 @@ const Reel = () => {
   let observer = new IntersectionObserver(callback, { threshold: 0.6 });
   return (
     <>
+    
       <div className="App">
+        <Logo/>
         <center>
           {/* <div className="logo">
           <img alt="logo" src={Logo} className="insta-logo" />
