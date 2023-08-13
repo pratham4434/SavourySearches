@@ -42,7 +42,7 @@ const Navbar = () => {
       <div className="sav__navbar-links">
         <div className="sav__navbar-links_logo">
           <p>
-            <a href="#">SavourySearches</a>
+            SavourySearches
           </p>
         </div>
         <div className="sav__navbar-links_container">

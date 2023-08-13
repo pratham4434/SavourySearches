@@ -1,0 +1,126 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+  }
+  .main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .card-container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    max-width: 65%;
+  }
+  .card_sect-text {
+    font-size: large;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .gradient__text2 {
+    background: var(--gradient-text);
+    font-size: xx-large;
+    font-weight: 500;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .cards-elements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    background-color: #e3eeb9;
+    border-radius: 10px;
+    margin-top: 0;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin: 2rem;
+    min-height: 40vh;
+    box-shadow: 0 4px 6px rgba(151, 151, 151, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    /* background: rgba(204, 214, 166, 0.25); */
+    box-shadow: 0 8px 32px 0 #a9b1a9;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    word-wrap: break-word;
+  }
+  
+  .flex {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+  }
+  .star{
+    display: flex;
+    color: yellow;
+    padding: 8px;
+  }
+  .card_title {
+    color: black;
+    font-weight: 700;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .btn_stall {
+    margin-top: 18px;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #a8e1a6;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .btn_stall:hover {
+    transform: scale(1.05);
+    border: solid 2px;
+  }
+  .card img {
+    width: 100%;
+    min-height: 20vh;
+    border-radius: 10px;
+  }
+  
+  .card h3 {
+    /* margin: 10px 0; */
+    color: #333;
+  }
+  
+  .card p {
+    color: #666;
+  }
+  

@@ -1,13 +1,17 @@
 .input_section {
   background-image: url("https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/health/wp-content/uploads/2022/01/foods_to_eat_to_lose_weight.jpeg");
+
+  /* background-image: url("https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/health/wp-content/uploads/2022/01/foods_to_eat_to_lose_weight.jpeg"); */
   object-fit: stretch;
-  height: 250px;
+  height: 350px;
   border: none;
   border-radius: 100px 100px 0 0;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 50px 50px 0 #969696;
+
 }
 
 .inp_bar {
@@ -55,5 +59,7 @@
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
+  
+
 
 }
