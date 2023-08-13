@@ -1,44 +1,73 @@
-
-
-
 # Savoury Searches
 
 Built at [StatusCode 0](https://hackathon.iiitkalyani.ac.in/#)  in 30 hrs !
 
-Watch the demo video [here](https://www.youtube.com/watch?v=REpp8VCX1NE) 
+Watch the demo video [here](https://www.youtube.com/watch?v=REpp8VCX1NE&ab_channel=TrojanBoi) 
 
-
-### What is Savoury Searches?
-- Savoury Searches is a web-app solution for the foodie-peoples who loves food and also love to explore new food. It is basically an app which locates the best street foods stalls and outlets across the city 😍🙌.
-- Many of us love eating outside and tasty street foods are the favourites for many. So we built a one-stop platform to explore the famous street foods, which will not only help the users to explore more but also the small business owners and stall owners to make a bigger audience and earn more while doing what they do.
-- We promote only small food stalls like Momos wale, Tea Corners, etc. which are not capable to make thier online presence on food-delievery apps like Zomato and Swiggy. 
-- Its a website where the normal users can share their reviews about a stall or shop, rate them and even can suggest the team to add one of their favourite stalls in their locality or so.
+[![Watch the video]()]()
 
 
 
-### Why we built this?
-We are a college students and we oftenly eat outside and the street food is our first place to visit as we cannot afford that expensive food. We always explore to find new places with tasty food stalls and street food like recently a friend of us suggested to visit the Raju Soft Corner who makes delicious Dosa and Idli that too in Rs. 50 per plate. 
 
-But what if someone living there not have such a good friend and never explored the fabulous taste that was located nearby. So we came up with the idea to make a web-app based on this where someone who has explored some good foods can share their review and also add their favourite stall which will now be visible for everyone. And others can now view that stall in the map section and explore the stall and ahve amazing food😊!
+### "Savoury Searches" - A Web-App Solution for Food Enthusiasts and Explorers 🍔🌮🍟
+
+Savoury Searches is a user-friendly web application designed to cater to the needs of passionate foodies who thrive on culinary adventures and have an insatiable craving for exploring new and delectable street food experiences. With an emphasis on promoting local flavors and hidden gems, this app serves as the ultimate guide for discovering the finest street food stalls and outlets across the city. 
+
+### Why Savoury Searches?
+
+*Comprehensive Street Food Exploration:* Explore diverse street food options, whether you're a tourist, local, or food enthusiast.
+*Emphasis on Local Culinary Delights:* We uplift local vendors like 'Momos wale' and 'Tea Corners,' boosting their reach despite limited online presence on major delivery platforms.
+*Supporting Local Economies:* Savoury Searches boosts local food economy by driving foot traffic to street stalls.
+*User-Generated Reviews and Ratings:* Users review stalls, sharing experiences and insights. Ratings aid fellow foodies in informed choices, embarking on flavorful journeys crafted by the community's expertise.
+*Interactive Suggestion System:* Savoury Searches thrives on community involvement. Users suggest preferred local street food stalls, driving active participation and vibrant culinary exploration
+*User-Centric Interface:* Savoury Searches offers an intuitive, visually pleasing interface for effortless category browsing and navigation.
+*Mobile-Friendly Access:* Savoury Searches is accessible through web browsers on desktops and mobile devices.
+
+
+
+
+### What inspired us?
+
+We, as college students, frequently dine out due to budget constraints, often opting for street food. Our quest for delectable yet affordable options led us to discover gems like Raju Soft Corner which was the cheapest yet tastiest fast food stall in that area, suggested by a friend living there. Inspired by this, we envisioned a web application. This platform allows individuals acquainted with exceptional food spots to share reviews and recommend their favorite stalls. This information is accessible to all users via the map section, enabling everyone to indulge in delightful culinary experiences.
 
 ### How we BUILT this?
 Features:
-- [ ] Auth0 login/signup with custom actions deployed 
-- [ ] MAPBOX: map feature to locate nearby stalls and outlets
-- [ ] AWS S3 bucket to store video content posted by users
-- [ ] Add a new stall 
-- [ ] Add images of the stalls and foods 
-- [ ] Accurate location using location picker built with MAPBOX 
-- [ ] Add reviews in stall page
-- [ ] Rate the stalls 
-- [ ] Report the fake stalls
-- [ ] Follow/unfollow users
-- [ ] Add reactions to the content
+- [ ] Seamless Auth0 integration for secure login/signup, fortified with custom actions for enhanced user experience.
+- [ ] MAPBOX integration for a dynamic map feature, empowering users to pinpoint nearby stalls and outlets, enriching their culinary journeys.
+- [ ] AWS S3 integration to seamlessly manage and store user-uploaded video content, enhancing engagement and interaction.
+- [ ] Intuitive feature to effortlessly add new stalls, contributing to the community's expanding repository of delectable destinations.
+- [ ] Display prowess through stall and food images, augmenting the platform's visual allure and enhancing user engagement.
+- [ ] Leveraging MAPBOX's location picker, we ensure utmost accuracy in marking stall locations, ensuring users find their culinary treasures effortlessly.
+- [ ] Mechanism to report potentially fake stalls, fostering a trustworthy environment and safeguarding users' culinary endeavors.
+- [ ] Enable users to add reactions to content, creating an interactive space where enthusiasm is celebrated and shared.
+
+### Tracks we used:
+1. Auth0 - Savoury Searches seamlessly incorporates Auth0's authentication framework, ensuring hassle-free onboarding, robust user data protection, and personalized interactions. Our platform exemplifies Auth0's track goals by enhancing user engagement and security simultaneously.
+2. Best domain name for GoDaddy - A straightforward and concise option that clearly represents the purpose of your platform.
+3. MongoDB Atlas - In Savoury Searches, MongoDB Atlas was utilized for efficient and scalable data storage. It managed stall details, user profiles, reviews, and geospatial information for the interactive map. MongoDB's cloud deployment, security features, and scalability supported the platform's growth, while integration with the backend facilitated seamless data operations.
+4. Best Postman public Workplace
+5. Best use of APIs :
+   *MAPBOX API*: Enables an interactive map for precise stall location, elevating culinary exploration.
+    
+   *Cloudinary API*: Effortlessly manages user image uploads, optimizing visuals for stalls and food items.
+      
+   *AWS S3 API*: Stores and retrieves user videos, generating accessible links for enriched multimedia content.
+      
+   *Auth0 API*: Ensures secure authentication and authorization, managing user identities for trusted interactions.
+      
+   *Database APIs*: Facilitates seamless data management in MongoDB Atlas, powering stall details, profiles, and reviews.
+      
+   *External Content APIs*: Potential integration enhances user insights and choices with external ratings or reviews.
 
 ### Challenges that we faced?
-We used MAPBOX api's to build the map component to display the stall locations from our custom dataset. Also to locate the nearby stall locations we had to fetch the user live geolocation which was very challenging in itself. Then to calculate the distance between users location and the stall we had to write a unique function.
 
-We had to take the real images from user about the stall and post where we had to use cloudinary to upload the image and then save the url of the asset in the database which was very new to us. Apart from that using AWS S3 bucket to store the reels and generate a accessble link of the video uploaded, We faced many errors while doing so 
+Implementing our platform, we adeptly integrated MAPBOX APIs to create an interactive map displaying stall locations from our dataset. Achieving accurate user geolocation data retrieval for nearby stalls posed a notable challenge, which we surmounted by crafting a unique distance calculation function.
+
+Facilitating user-contributed images demanded Cloudinary's prowess, enabling seamless image upload and storage of asset URLs in our database. This enhancement ensured authentic and engaging content presentation.
+
+Additionally, our utilization of AWS S3 for media storage and accessible video links encountered complexities. Navigating through challenges, we successfully enabled streamlined video content management.
+
+Our technical journey underscores innovation, resilience, and skillful solutions, fostering growth and technical advancement.
 
 
   
@@ -46,15 +75,13 @@ We had to take the real images from user about the stall and post where we had t
 #### Techstack used: 
 <p > REACTJS, AWS, MAPBOX API, AUTH0, MONGODB, NODEJS, CLOUDINARY, TAILWINDCSS </p>
  
-#### [Postman Workspace Link](https://www.postman.com/dev-lovers/workspace/savoury-searches/overview) 
+ ### Api Documentation
+#### [Postman Workspace Link]() 
 
 
 ##  Our Amzaing TEAM !
 * BIKRAM SAHA - [Github](https://github.com/BIKRAM-SAHA) [linkedin](https://www.linkedin.com/in/bikram-saha-4b3b731bb/)
 * ROHIT RANJAN - [Github](https://github.com/rohitranjan-2702) [linkedin](https://www.linkedin.com/in/rohit-ranjan-singh-6133901b6/)
+* PRATHAM SHARMA- [Github](https://github.com/pratham4434) [linkedin](https://www.linkedin.com/in/pratham-sharma-abcabcabc/)
 * RAHUL KUMAR - [Github](https://github.com/RAHUL14KUMAR) [linkedin](https://www.linkedin.com/in/rahul-kumar-216872227/)
 * JYOTIRADITYA MISHRA - [Github](https://github.com/jradityamishra) [linkedin](https://www.linkedin.com/in/jyotiraditya-mishra-090047204/)
-* PRATHAM SHARMA- [Github](https://github.com/pratham4434) [linkedin](https://www.linkedin.com/in/jyotiraditya-mishra-090047204/)
-
-
-
