@@ -2,14 +2,22 @@
 
 Built at [StatusCode 0](https://hackathon.iiitkalyani.ac.in/#)  in 30 hrs !
 
+### Api Documentation
+#### [Postman Workspace Link](https://www.postman.com/dev-lovers/workspace/savoury-searches) 
+
+
 Watch the demo video [here](https://www.youtube.com/watch?v=REpp8VCX1NE&ab_channel=TrojanBoi) 
+### Homepage:
+<img src="/assets/home.jpg" alt="home" style="height:60vh; width:95vw;"/>
 
-
+### Overview:
+<img src="/assets/overview.jpg" alt="overview" style="height:60vh; width:95vw;"/>
 
 ### "Savoury Searches" - A Web-App Solution for Food Enthusiasts and Explorers 🍔🌮🍟
 
 Savoury Searches is a user-friendly web application designed to cater to the needs of passionate foodies who thrive on culinary adventures and have an insatiable craving for exploring new and delectable street food experiences. With an emphasis on promoting local flavors and hidden gems, this app serves as the ultimate guide for discovering the finest street food stalls and outlets across the city. 
 
+ 
 ### Why Savoury Searches?
 
 *Comprehensive Street Food Exploration:* Explore diverse street food options, whether you're a tourist, local, or food enthusiast.
@@ -67,14 +75,9 @@ Additionally, our utilization of AWS S3 for media storage and accessible video l
 Our technical journey underscores innovation, resilience, and skillful solutions, fostering growth and technical advancement.
 
 
-  
-
 #### Techstack used: 
 <p > REACTJS, AWS, MAPBOX API, AUTH0, MONGODB, NODEJS, CLOUDINARY, TAILWINDCSS </p>
  
- ### Api Documentation
-#### [Postman Workspace Link]() 
-
 
 ##  Our Amzaing TEAM !
 * BIKRAM SAHA - [Github](https://github.com/BIKRAM-SAHA) [linkedin](https://www.linkedin.com/in/bikram-saha-4b3b731bb/)
