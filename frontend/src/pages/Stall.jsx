@@ -59,7 +59,9 @@ const Stall = () => {
                     : stall.ratings?.reduce((accumulator, a) => {
                         return accumulator + a;
                       }, 0) / stall.ratings?.length}
+                      
                 </h1>
+                <Rating maxStars={5} stallid={stallid}/>
               </div>
             </div>
             <div></div>
@@ -79,7 +81,10 @@ const Stall = () => {
                 </Tabs.List>
 
                 <Tabs.Panel value="first" pt="xs">
-                  <Menu enlister={stall.postedBy} menuUrl={""} />
+                  <Menu
+                    enlister={stall.postedBy}
+                    menuUrl={stall.menu ? stall.menu[0] : ""}
+                  />
                 </Tabs.Panel>
 
                 <Tabs.Panel value="second" pt="xs">

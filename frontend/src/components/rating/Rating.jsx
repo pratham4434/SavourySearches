@@ -1,13 +1,19 @@
 import { useState } from "react";
+import axios from "axios";
 
-const Rating = ({ maxStars }) => {
+const Rating = ({ maxStars, stallid }) => {
   const [rating, setRating] = useState(0);
 
   const handleStarClick = (star) => {
     setRating(star);
   };
-  const handleClick = () => {
-    console.log(rating);
+  const handleClick = async () => {
+    
+    await axios.post(`${process.env.REACT_APP_BACKENDURL}/poststall/${stallid}`, {
+        rating
+    }).then((data)=> {
+        console.log(data)
+    }).catch((err) => console.log(err))
   };
 
   return (
