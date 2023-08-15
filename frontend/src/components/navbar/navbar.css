@@ -7,7 +7,8 @@
     position: fixed;
   
     padding: 1.3rem 6rem;
-    z-index: 10000;
+    z-index: 1;
+    
   }
   
   .sav__navbar-bg {

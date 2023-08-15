@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <div>
         <div className="gradient__bg">
-          <Navbar />
+          {/* <Navbar /> */}
           <Header />
           <Input />
         </div>

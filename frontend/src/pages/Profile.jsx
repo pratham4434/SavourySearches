@@ -233,11 +233,11 @@ const Profile = () => {
         <Uploadreel />
       ) : (
         // isAuthenticated && (
-        <div className="">
+        <div className="snap-center relative">
           {/* <img src={user.picture} alt={user.name} />
             <h2>{user.name}</h2>
             <p>{user.email}</p> */}
-          <div className="flex justify-center relative top-16 left-1 right-1">
+          <div className=" flex   my-10 absolute top-10">
             <div className=" pb-8 shadow-xl shadow-btn-color md:w-2/4 lg:w-2/4 xl:w-2/4 w-4/5 md:h-3/5 lg:h-3/5 xl:h-3/5 h-1/4 rounded-lg bg-card-color">
               {/* heading edit and personal details */}
               <div className="flex flex-row justify-around  m-4 ">

@@ -11,6 +11,8 @@ import Reel from "./pages/Reel";
 import Stall from "./pages/Stall";
 import Logo from "./component/Logo"
 import Stalls from "./pages/Stalls";
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./component/Footer/Footer";
 function App() {
   const [userEmail, setUserEmail] = useState("");
   const { isAuthenticated, user } = useAuth0();
@@ -23,6 +25,7 @@ function App() {
     <>
       <BrowserRouter>
         <AuthContext.Provider value={{ userEmail, setUserEmail }}>
+          <Navbar/>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/explore" element={<Explore />} />
@@ -34,6 +37,7 @@ function App() {
             <Route path="/stall/:stallid" element={<Stall />} />
             <Route path="/searching/:term" element={<Stalls />} />
           </Routes>
+          {/* <Footer/> */}
         </AuthContext.Provider>
       </BrowserRouter>
     </>
